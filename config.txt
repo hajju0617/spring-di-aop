@@ -1,0 +1,2 @@
+car=com.spring.ch3.diCopy2.Truck
+engine=com.spring.ch3.diCopy2.Engine
