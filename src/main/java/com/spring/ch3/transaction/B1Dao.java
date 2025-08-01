@@ -1,4 +1,4 @@
-package com.spring.ch3.transaction1;
+package com.spring.ch3.transaction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceUtils;
@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 @Repository
-public class A1Dao {
+public class B1Dao {
     @Autowired
     DataSource dataSource;
 
@@ -25,7 +25,7 @@ public class A1Dao {
             // 커넥션이 정말 같은지 확인.
             System.out.println("connection = " + connection);
 
-            preparedStatement = connection.prepareStatement("insert into a1 values(?, ?)");
+            preparedStatement = connection.prepareStatement("insert into b1 values(?, ?)");
             preparedStatement.setInt(1, key);
             preparedStatement.setInt(2, value);
 
